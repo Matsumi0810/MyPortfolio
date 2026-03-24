@@ -279,7 +279,7 @@ function About() {
               <span className={styles.hobbyText}>食</span>べることが何よりも好きで、白米があれば一生幸せでいられます。{" "}
             </p>
             <p className={styles.camera}>使用機材：iPhone / Canon EOS R10</p>
-            <p className={styles.photoZoom}>＊クリックして拡大表示できます＊</p>
+            <p className={styles.photoZoom}>＊クリックで拡大表示できます＊</p>
             <div className={styles.photoGrid}>
               {photos.map((p, i) => (
                 <div
