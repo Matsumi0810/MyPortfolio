@@ -209,7 +209,7 @@ function TimelineItem({ month, index }) {
                   alt={month.projectNote}
                   className={styles.projectThumbImg}
                 />
-                <span className={styles.projectOverlay}>サイトを見る →→</span>
+                <span className={styles.projectOverlay}>サイトを見る →</span>
               </a>
             ) : (
               <div className={styles.projectPlaceholder}>
