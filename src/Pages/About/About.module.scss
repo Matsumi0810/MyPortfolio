@@ -1,0 +1,412 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding-top: 8rem;
+}
+
+// ============================================
+// Page Header
+// ============================================
+.pageHeader {
+  padding: 8rem 6rem 5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "About";
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: 16rem;
+    font-weight: 600;
+    color: rgba(136, 211, 194, 0.08);
+    pointer-events: none;
+    line-height: 1;
+  }
+}
+
+.breadcrumb {
+  font-size: 1.3rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  a {
+    color: var(--color-accent-dark);
+    transition: opacity var(--transition);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: 1.6rem;
+}
+
+// ============================================
+// Profile Section
+// ============================================
+.profileSection {
+  padding: 4rem 6rem;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 8rem;
+  align-items: start;
+  max-width: 120rem;
+}
+
+.avatarWrap {
+  position: sticky;
+  top: 10rem;
+}
+
+.avatar {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 1.6rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-light),
+    rgba(136, 211, 194, 0.15)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10rem;
+  margin-bottom: 3.2rem;
+  box-shadow: var(--shadow);
+}
+
+.nameBlock {
+  text-align: center;
+}
+
+.nameJa {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.nameEn {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+}
+
+.socialLink {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  color: var(--color-text-light);
+  font-size: 1.8rem;
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    transform var(--transition);
+
+  &:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent-dark);
+    transform: translateY(-0.2rem);
+  }
+}
+
+// ============================================
+// Bio Content
+// ============================================
+.bio {
+  padding-bottom: 8rem;
+}
+
+.bioBlock {
+  margin-bottom: 5.6rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.bioLabel {
+  font-size: 1.2rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-border);
+  }
+}
+
+.bioTitle {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 1.6rem;
+}
+
+.bioText {
+  font-size: 1.6rem;
+  color: var(--color-text);
+  line-height: 2;
+}
+
+.timeline {
+  border-left: 2px solid var(--color-border);
+  padding-left: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+
+.timelineItem {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -3rem;
+    top: 0.6rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--color-accent);
+  }
+}
+
+.timelineYear {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-dark);
+  margin-bottom: 0.4rem;
+}
+
+.timelineTitle {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.timelineDesc {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.skillBadge {
+  padding: 0.8rem 2rem;
+  background: rgba(136, 211, 194, 0.12);
+  border: 1px solid rgba(136, 211, 194, 0.3);
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  transition:
+    background var(--transition),
+    border-color var(--transition);
+
+  &:hover {
+    background: rgba(136, 211, 194, 0.25);
+    border-color: var(--color-accent);
+  }
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 6rem 2.4rem 3.2rem;
+    &::after {
+      display: none;
+    }
+  }
+
+  .profileSection {
+    grid-template-columns: 1fr;
+    padding: 2.4rem 2.4rem;
+    gap: 4rem;
+  }
+
+  .avatarWrap {
+    position: static;
+    max-width: 28rem;
+    margin: 0 auto;
+  }
+
+  .bio {
+    padding-bottom: 5rem;
+  }
+}
+
+// ============================================
+// Photography / Hobby Section
+// ============================================
+.photoSection {
+  background: #f9fffe;
+  padding: 8rem 0;
+}
+
+.photoInner {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+.photoTitle {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 4.4rem);
+  font-weight: 300;
+  color: var(--color-text);
+  margin-bottom: 2.4rem;
+
+  span {
+    display: block;
+    font-size: 1.6rem;
+    font-family: var(--font-body);
+    color: var(--color-text-light);
+    font-weight: 300;
+    margin-top: 0.8rem;
+  }
+}
+
+.photoIntro {
+  font-size: 1.6rem;
+  color: var(--color-text);
+  line-height: 2;
+  max-width: 80rem;
+  margin-bottom: 2rem;
+}
+.hobbyText {
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--color-accent-dark);
+}
+
+.photoZoom {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.photoGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.2rem;
+}
+
+.photoCard {
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--color-border);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: var(--shadow-hover);
+  }
+}
+
+.photoPlaceholder {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  background: linear-gradient(
+    135deg,
+    rgba(136, 211, 194, 0.18),
+    rgba(136, 211, 194, 0.05)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoCaption {
+  padding: 1.6rem;
+}
+
+.photoCaptionLabel {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.4rem;
+}
+
+.photoCaptionDesc {
+  font-size: 1.3rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.photoNote {
+  font-size: 1.3rem;
+  color: var(--color-text-light);
+  background: rgba(136, 211, 194, 0.08);
+  border: 1px dashed var(--color-accent-light);
+  border-radius: 0.6rem;
+  padding: 1.2rem 1.6rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .photoSection {
+    padding: 6rem 0;
+  }
+  .photoInner {
+    padding: 0 2.4rem;
+  }
+  .photoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}

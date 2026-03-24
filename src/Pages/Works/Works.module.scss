@@ -1,0 +1,277 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding-top: 8rem;
+}
+
+// ============================================
+// Page Header
+// ============================================
+.pageHeader {
+  padding: 8rem 6rem 5rem;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "Works";
+    position: absolute;
+    right: 4rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--font-display);
+    font-size: 16rem;
+    font-weight: 600;
+    color: rgba(136, 211, 194, 0.08);
+    pointer-events: none;
+    line-height: 1;
+  }
+}
+
+.breadcrumb {
+  font-size: 1.3rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  a {
+    color: var(--color-accent-dark);
+    transition: opacity var(--transition);
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.pageTitle {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 7.2rem);
+  font-weight: 300;
+  color: var(--color-text);
+  line-height: 1;
+  margin-bottom: 1.6rem;
+}
+
+.pageDesc {
+  font-size: 1.6rem;
+  color: var(--color-text-light);
+  max-width: 56rem;
+  line-height: 1.8;
+}
+
+// ============================================
+// Works Grid
+// ============================================
+.worksSection {
+  padding: 4rem 6rem 10rem;
+}
+
+.worksGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
+  gap: 3.2rem;
+  margin-bottom: 8rem;
+}
+
+.bannersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
+  gap: 3.2rem;
+}
+
+.worksCategory {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #9f9f9f;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: #cccccc;
+  }
+}
+
+.workCard {
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+  background: #ffffff;
+
+  &:hover {
+    transform: translateY(-0.6rem);
+    box-shadow: var(--shadow-hover);
+
+    .workThumb img {
+      transform: scale(1.04);
+    }
+  }
+}
+
+.workThumb {
+  height: 22rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--color-accent-light), #d4f0ea);
+  position: relative;
+  cursor: zoom-in;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+}
+
+.workPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(136, 211, 194, 0.2),
+    rgba(136, 211, 194, 0.05)
+  );
+}
+
+.workBody {
+  padding: 2.8rem;
+}
+
+.workCategory {
+  font-size: 1.2rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  margin-bottom: 0.8rem;
+}
+
+.workTitle {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.bannerText {
+  font-size: 2rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.2rem;
+
+  span {
+    font-size: 6rem;
+    color: var(--color-accent-dark);
+    font-weight: 500;
+  }
+}
+.bannerNote {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  margin-bottom: 8rem;
+}
+
+.workNote {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.workDesc {
+  font-size: 1.4rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.workTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.tag {
+  font-size: 1.2rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(136, 211, 194, 0.12);
+  color: var(--color-accent-dark);
+  border-radius: 10rem;
+}
+
+// ============================================
+// Modal
+// ============================================
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  cursor: zoom-out;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.modalCaption {
+  color: #ffffff;
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+    padding: 6rem 2.4rem 3.2rem;
+    &::after {
+      display: none;
+    }
+  }
+
+  .worksSection {
+    padding: 2.4rem 2.4rem 6rem;
+  }
+
+  .worksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .closeBtn {
+    top: -4rem;
+    right: 0;
+  }
+}
