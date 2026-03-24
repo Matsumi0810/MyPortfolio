@@ -83,7 +83,7 @@ const photos = [
     camera: "iPhone",
   },
   {
-    src: "images/10.webp",
+    src: "images/10.JPEG",
     label: "大阪：USJ",
     desc: "一人でインパークしましたが、はちゃめちゃに楽しみました",
     camera: "iPhone",
@@ -95,19 +95,19 @@ const photos = [
     camera: "Canon",
   },
   {
-    src: "images/6.webp",
+    src: "images/6.JPEG",
     label: "尾道：裏路地",
     desc: "旅先の裏路地によく惹かれます",
     camera: "iPhone",
   },
   {
-    src: "images/8.webp",
+    src: "images/8.JPEG",
     label: "尾道：猫の細道",
     desc: "あまり猫ちゃんに出会えませんでした",
     camera: "iPhone",
   },
   {
-    src: "images/9.webp",
+    src: "images/9.JPEG",
     label: "尾道：サイクリングロード",
     desc: "思い立って一人でサイクリングしてみました。現地の方が優しかったです",
     camera: "iPhone",
