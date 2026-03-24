@@ -86,7 +86,7 @@
     /* 画像を背景ではなく擬似要素として配置すると管理しやすいよ */
     content: '';
     position: absolute;
-    background-image: url('products/i.png');
+    background-image: url('/products/i.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
