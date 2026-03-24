@@ -65,7 +65,7 @@ const photos = [
     camera: "iPhone",
   },
   {
-    src: "images/17.webp",
+    src: "images/17.JPEG",
     label: "山口：唐戸市場",
     desc: "天国に来たかと思いました",
     camera: "iPhone",
@@ -131,7 +131,7 @@ const photos = [
     camera: "Canon",
   },
   {
-    src: "images/16.webp",
+    src: "images/16.JPEG",
     label: "宮島：うえの",
     desc: "煮穴子LOVE",
     camera: "iPhone",
