@@ -67,7 +67,7 @@
   grid-template-columns: 1fr 1.6fr;
   gap: 8rem;
   align-items: start;
-  max-width: 120rem;
+  max-width: 140rem;
 }
 
 .avatarWrap {
@@ -76,7 +76,7 @@
 }
 
 .avatar {
-  width: 100%;
+  width: 80%;
   height: auto;
   aspect-ratio: 1/1;
   overflow: hidden;
@@ -90,7 +90,7 @@
   align-items: center;
   justify-content: center;
   font-size: 10rem;
-  margin-bottom: 3.2rem;
+  margin: 0 auto 3.2rem;
   box-shadow: var(--shadow);
 }
 

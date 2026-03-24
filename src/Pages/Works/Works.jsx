@@ -7,7 +7,6 @@ import styles from "./Works.module.scss";
 const works = [
   {
     id: 1,
-    category: "Web Design",
     title: "水族館 Webサイト",
     image: "/images/aquarium.png",
     link: "https://aquarium-rho.vercel.app/",
@@ -17,7 +16,6 @@ const works = [
   },
   {
     id: 2,
-    category: "Web Design",
     title: "カフェ Webサイト",
     image: "/images/komorebi.png",
     link: "https://komorebi-kitchin-one.vercel.app/",
@@ -53,29 +51,46 @@ const banners = [
     desc: "画像の配置にこだわったり深めの赤を使用することでしてラグジュアリーな雰囲気になるように制作しました。",
   },
   {
-    id: 4,
+    id: 5,
     title: "バレンタインフェア2",
     image: "/banners/Valentine2.png",
     desc: "1つ目の案より動きを抑えめにして少しシンプル目に仕上げました。",
   },
   {
-    id: 4,
+    id: 6,
     title: "バレンタインフェア3",
     image: "/banners/Valentine3.png",
     desc: "フォントの種類を変えて少しカジュアル目な雰囲気になるように仕上げました。",
   },
   {
-    id: 3,
+    id: 7,
     title: "モバイルオーダー開始",
     image: "/banners/mobileOder.png",
     desc: "モバイルオーダーの開始を告知するためのバナーです。目立ちやすい色と、わかりやすいイラストを使用して制作しました。",
   },
   {
-    id: 5,
+    id: 8,
     title: "ダブルポイントキャンペーン",
     image: "/banners/w-point3.png",
     desc: "ニューモーフィズムデザインの練習として作成しました。",
   },
+];
+
+const games = [
+  {
+    id: 1,
+    title: "ナンバーサム",
+    image: "/images/numsum.png",
+    link: "https://num-sum.vercel.app/",
+    desc: "数字を並べて、合計値を求めるパズルゲームです。広告なしで遊びたかったので制作しました。スマホのブラウザで開き、ホーム画面にアイコンを追加することでオフラインでもプレイ可能にしました。",
+  },
+  // {
+  //   id: 2,
+  //   title: "カフェ Webサイト",
+  //   image: "/images/komorebi.png",
+  //   link: "https://komorebi-kitchin-one.vercel.app/",
+  //   desc: "microCMSやSSGフォームとの連携やモーダル表示など、JavaScriptを活用して動的な要素を実装したカフェのWEBサイトです。",
+  // },
 ];
 
 function Works() {
@@ -102,8 +117,8 @@ function Works() {
             これまで制作したプロジェクトをまとめています。
           </p>
         </div>
-
         <section className={styles.worksSection}>
+        {/* ウェブサイト＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
           <h3 className={styles.worksCategory}>Site</h3>
           <p className={styles.workNote}>＊クリックでサイトに移動＊</p>
           <div className={styles.worksGrid}>
@@ -129,7 +144,6 @@ function Works() {
                   />
                 </div>
                 <div className={styles.workBody}>
-                  <p className={styles.workCategory}>{work.category}</p>
                   <h2 className={styles.workTitle}>{work.title}</h2>
                   <p className={styles.workDesc}>{work.desc}</p>
                   <div className={styles.workTags}>
@@ -145,9 +159,14 @@ function Works() {
             ))}
           </div>
 
+          {/* バナー＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
           <h3 className={styles.worksCategory}>Banner</h3>
-          <p className={styles.bannerText}><span>3</span>秒以内に伝わるデザインを目指しています</p>
-          <p className={styles.bannerNote}>【制作時間目安】1案目：2〜3時間、2案目：1〜2時間、3案目：1時間</p>
+          <p className={styles.bannerText}>
+            <span>3</span>秒以内に伝わるデザインを目指しています
+          </p>
+          <p className={styles.bannerNote}>
+            【制作時間目安】1案目：2〜3時間、2案目：1〜2時間、3案目：1時間
+          </p>
           <p className={styles.workNote}>＊クリックで画像を拡大＊</p>
           <div className={styles.bannersGrid}>
             {banners.map((banner) => (
@@ -167,6 +186,42 @@ function Works() {
                   <p className={styles.workDesc}>{banner.desc}</p>
                 </div>
               </article>
+            ))}
+          </div>
+
+          {/* ゲーム＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
+          <h3 className={styles.worksCategory}>Game</h3>
+          <p className={styles.bannerText}>
+            <span>AI</span>のみで制作しました
+          </p>
+          <p className={styles.workNote}>＊クリックでサイトに移動＊</p>
+          <div className={styles.worksGrid}>
+            {games.map((game) => (
+              <a
+                key={game.id}
+                href={game.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.workCard}
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <div className={styles.workThumb} style={{ cursor: "pointer" }}>
+                  <img
+                    src={game.image}
+                    alt={game.title}
+                    className={styles.workImage}
+                  />
+                </div>
+                <div className={styles.workBody}>
+                  <h2 className={styles.workTitle}>{game.title}</h2>
+                  <p className={styles.workDesc}>{game.desc}</p>
+                </div>
+              </a>
             ))}
           </div>
         </section>

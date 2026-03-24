@@ -34,6 +34,7 @@ const skillList = [
   "JavaScript",
   "React",
   "React Router",
+  "microCMS",
   "GitHub",
   "Figma",
   "Adobe Photoshop",
@@ -220,7 +221,7 @@ function About() {
               <p className={styles.bioLabel}>Profile</p>
               <h2 className={styles.bioTitle}>はじめまして</h2>
               <p className={styles.bioText}>
-                はじめまして、松井と申します。今までは主に飲食関係の仕事をしていましたが、
+                はじめまして、松井と申します。今までは主に飲食・小売関係の仕事をしていましたが、
                 「自分でサイトを作ってみたい」という想いからWebの世界に飛び込みました。
                 <br />
                 職業訓練校でHTML/CSS・JavaScriptからReactまで幅広く学び、
