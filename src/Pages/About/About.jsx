@@ -257,7 +257,7 @@ function About() {
 
             <div className={styles.bioBlock}>
               <p className={styles.bioLabel}>Interest</p>
-              <h2 className={styles.bioTitle}>興味</h2>
+              <h2 className={styles.bioTitle}>興味があるもの</h2>
               <div className={styles.skillList}>
                 {interest.map((s) => (
                   <span key={s} className={styles.skillBadge}>
