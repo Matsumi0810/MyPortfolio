@@ -77,7 +77,7 @@ const photos = [
     camera: "iPhone",
   },
   {
-    src: "images/3.webp",
+    src: "images/3.JPEG",
     label: "大阪：USJ",
     desc: "テーマパークも大好きです",
     camera: "iPhone",
