@@ -71,7 +71,7 @@ const photos = [
     camera: "iPhone",
   },
   {
-    src: "images/12.webp",
+    src: "images/12.JPEG",
     label: "山口：秋芳洞",
     desc: "洞窟の中は非日常的で圧倒されました",
     camera: "iPhone",
@@ -113,7 +113,7 @@ const photos = [
     camera: "iPhone",
   },
   {
-    src: "images/13.webp",
+    src: "images/13.JPEG",
     label: "広島：夏の雲",
     desc: "夏の雲のビジュはいつも最高で好きです",
     camera: "iPhone",
