@@ -10,8 +10,8 @@ const works = [
     title: "水族館 Webサイト",
     image: "/images/aquarium.png",
     link: "https://aquarium-rho.vercel.app/",
-    desc: "HTML・CSS・JavaScriptで制作した水族館のWEBサイトです。jsでアニメーションを実装し、動きのあるサイトに仕上げました。性格診断占いや、名前募集の応募フォームにもこだわりました。",
-    tags: ["HTML", "CSS", "JavaScript"],
+    desc: "HTML・CSS・JavaScriptで制作した水族館のWEBサイトです。jsでアニメーションを実装し、動きのあるサイトに仕上げました。性格診断占いや、名前募集の応募フォームにもこだわりました。初めて作ったウェブサイトなので、時間もかかりましたが、学びも多かったです。",
+    tags: ["HTML", "CSS", "JavaScript","初制作"],
     time: "制作期間：約14日",
   },
   {
