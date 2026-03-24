@@ -85,23 +85,22 @@
 }
 
 .heroRight {
-  position: relative; // absoluteをやめて、右側の枠として固定
-  width: 400px; // 円より少し大きいサイズを確保
+  position: relative;
+  width: 400px;
   height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0; // 画面が狭くなっても潰れないように
+  flex-shrink: 0;
 
   &::before {
-    /* 画像を背景ではなく擬似要素として配置すると管理しやすいよ */
     content: "";
     position: absolute;
     background-image: url("/products/i.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 150px; // ここで画像のサイズを調整
+    width: 150px;
     height: 150px;
     border-radius: 50%;
     z-index: 0;
