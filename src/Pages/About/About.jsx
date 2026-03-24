@@ -53,13 +53,13 @@ const photos = [
     camera: "Canon",
   },
   {
-    src: "images/4.webp",
+    src: "images/4.JPEG",
     label: "山口：ときわ公園",
     desc: "緑に映える花の色が好きです",
     camera: "iPhone",
   },
   {
-    src: "images/5.webp",
+    src: "images/5.JPEG",
     label: "山口：湯田",
     desc: "湯田温泉で癒されました",
     camera: "iPhone",
