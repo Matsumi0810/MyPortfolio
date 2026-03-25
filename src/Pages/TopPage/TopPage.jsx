@@ -280,7 +280,7 @@ function TopPage() {
             <em>Matsui</em>
           </h1>
           <p className={styles.heroSub}>
-            職業訓練校でWebデザイン・開発を学び、
+            職業訓練校でWebデザイン・アプリ開発を学び、
             <br />
             より良いユーザー体験を届けるサイト制作に取り組んでいます。
           </p>
