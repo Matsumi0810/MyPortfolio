@@ -19,7 +19,7 @@ const works = [
     title: "カフェ Webサイト",
     image: "/images/komorebi.png",
     link: "https://komorebi-kitchin-one.vercel.app/",
-    desc: "microCMSやSSGフォームとの連携、モーダル表示など、JavaScriptを活用して動的な要素を実装したカフェのWEBサイトです。",
+    desc: "microCMSやSSGフォームとの連携、モーダル表示など、JavaScriptを活用して動的な要素を実装したカフェのWEBサイトです。CMSを活用するにあたり、クライアントがいつでもページを更新できるコードを意識しました。",
     tags: ["microCMS", "SSGform", "React"],
     time: "制作期間：約30日",
   },
