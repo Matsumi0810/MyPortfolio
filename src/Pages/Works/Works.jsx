@@ -84,6 +84,13 @@ const games = [
     link: "https://num-sum.vercel.app/",
     desc: "数字を並べて、合計値を求めるパズルゲームです。広告なしで遊びたかったので制作しました。スマホのブラウザで開き、ホーム画面にアイコンを追加することでオフラインでもプレイ可能にしました。",
   },
+  {
+    id: 2,
+    title: "Comming Soon...",
+    image: "/banners/commingSoon.png",
+    link: "",
+    desc: "現在制作中のゲームです。完成次第、こちらに掲載します！現在は「テトリス」と「ナンプレ」を作成中です。",
+  },
   // {
   //   id: 2,
   //   title: "カフェ Webサイト",
