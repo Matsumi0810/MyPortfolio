@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Components/Header/Header.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
@@ -11,7 +11,7 @@ const works = [
     image: "/images/aquarium.png",
     link: "https://aquarium-rho.vercel.app/",
     desc: "HTML・CSS・JavaScriptで制作した水族館のWEBサイトです。jsでアニメーションを実装し、動きのあるサイトに仕上げました。初めて作ったウェブサイトなので、時間もかかり、作りきれていないページもありますが、学びも多かったです。性格診断のページはこだわったので、ぜひ遊んでみてください!",
-    tags: ["HTML", "CSS", "JavaScript","初制作"],
+    tags: ["HTML", "CSS", "JavaScript", "初制作"],
     time: "制作期間：約14日",
   },
   {
@@ -107,6 +107,18 @@ function Works() {
     setSelectedImage(null);
   };
 
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedImage]);
+
   return (
     <div className={styles.page}>
       <Header />
@@ -125,7 +137,7 @@ function Works() {
           </p>
         </div>
         <section className={styles.worksSection}>
-        {/* ウェブサイト＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
+          {/* ウェブサイト＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
           <h3 className={styles.worksCategory}>Site</h3>
           <p className={styles.workNote}>＊クリックでサイトに移動＊</p>
           <div className={styles.worksGrid}>
@@ -237,6 +249,8 @@ function Works() {
       {selectedImage && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modalContent}>
+            <span className={styles.closeGuide}>タップして閉じる</span>
+
             <img
               src={selectedImage.image}
               alt={selectedImage.title}
@@ -246,7 +260,6 @@ function Works() {
           </div>
         </div>
       )}
-
       <Footer />
     </div>
   );
