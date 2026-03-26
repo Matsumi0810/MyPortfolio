@@ -245,21 +245,19 @@ function Works() {
           </div>
         </section>
       </main>
-
       {selectedImage && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modalContent}>
             <span className={styles.closeGuide}>タップして閉じる</span>
-
             <img
-              src={selectedImage.image}
-              alt={selectedImage.title}
+              src={selectedImage.src}
+              alt={selectedImage.label}
               className={styles.modalImage}
             />
-            <p className={styles.modalCaption}>{selectedImage.title}</p>
+            <p className={styles.modalCaption}>{selectedImage.label}</p>
           </div>
         </div>
-      )}
+      )}{" "}
       <Footer />
     </div>
   );
