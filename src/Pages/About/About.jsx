@@ -342,48 +342,19 @@ function About() {
         </section>
       </main>
 
-      {selectedImage && (
-        <div
-          style={{
-            position: "fixed",
-            inset: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.85)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-            padding: "2rem",
-            cursor: "zoom-out",
-          }}
-          onClick={closeModal}
-        >
-          <div
-            style={{
-              position: "relative",
-              maxWidth: "90%",
-              maxHeight: "90%",
-              textAlign: "center",
-            }}
-          >
+{selectedImage && (
+        <div className={styles.modalOverlay} onClick={closeModal}>
+          <div className={styles.modalContent}>
+            <span className={styles.closeGuide}>タップして閉じる</span>
             <img
               src={selectedImage.src}
               alt={selectedImage.label}
-              style={{
-                maxWidth: "100%",
-                maxHeight: "80vh",
-                objectFit: "contain",
-                borderRadius: "0.4rem",
-              }}
+              className={styles.modalImage}
             />
-            <p
-              style={{ color: "#fff", marginTop: "1.6rem", fontSize: "1.8rem" }}
-            >
-              {selectedImage.label}
-            </p>
+            <p className={styles.modalCaption}>{selectedImage.label}</p>
           </div>
         </div>
       )}
-
       <Footer />
     </div>
   );
