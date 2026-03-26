@@ -410,3 +410,67 @@
     gap: 1.2rem;
   }
 }
+
+// ============================================
+// Modal (About用)
+// ============================================
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  cursor: zoom-out;
+  touch-action: none;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.closeGuide {
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.modalCaption {
+  color: #ffffff;
+  margin-top: 1.6rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .closeGuide {
+    top: -3rem;
+    font-size: 1.1rem;
+  }
+  .modalCaption {
+    font-size: 1.6rem;
+  }
+}
