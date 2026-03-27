@@ -114,7 +114,7 @@ const timelineMonths = [
         label: "実技",
         text: "React応用実習 — イベント・スタイリング・レンダリング・DB連携",
       },
-      { label: "実技", text: "開発準備実習 — Figmaでプロトタイプ" },
+      { label: "実技", text: "開発準備実習 — Figmaでプロトタイプ作成" },
     ],
     hours: "約102時間",
     hasProject: true,
