@@ -72,7 +72,8 @@
   padding: 4rem 6rem 10rem;
 }
 
-.worksGrid ,.bannersGrid {
+.worksGrid,
+.bannersGrid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(34rem, 1fr));
   gap: 3.2rem;
@@ -222,6 +223,7 @@
   z-index: 1000;
   padding: 2rem;
   cursor: zoom-out;
+  touch-action: none;
 }
 
 .modalContent {
@@ -231,6 +233,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.closeGuide {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 1rem;
+  border-radius: 0.4rem;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
 }
 
 .modalImage {
@@ -269,3 +284,4 @@
     right: 0;
   }
 }
+

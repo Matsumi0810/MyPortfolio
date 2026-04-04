@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Components/Header/Header.jsx";
 import Footer from "../../Components/Footer/Footer.jsx";
@@ -10,8 +10,8 @@ const works = [
     title: "水族館 Webサイト",
     image: "/images/aquarium.png",
     link: "https://aquarium-rho.vercel.app/",
-    desc: "HTML・CSS・JavaScriptで制作した水族館のWEBサイトです。jsでアニメーションを実装し、動きのあるサイトに仕上げました。性格診断占いや、名前募集の応募フォームにもこだわりました。初めて作ったウェブサイトなので、時間もかかりましたが、学びも多かったです。",
-    tags: ["HTML", "CSS", "JavaScript","初制作"],
+    desc: "HTML・CSS・JavaScriptで制作した水族館のWEBサイトです。jsでアニメーションを実装し、動きのあるサイトに仕上げました。初めて作ったウェブサイトなので、時間もかかり、作りきれていないページもありますが、学びも多かったです。性格診断のページはこだわったので、ぜひ遊んでみてください!",
+    tags: ["HTML", "CSS", "JavaScript", "初制作"],
     time: "制作期間：約14日",
   },
   {
@@ -19,7 +19,7 @@ const works = [
     title: "カフェ Webサイト",
     image: "/images/komorebi.png",
     link: "https://komorebi-kitchin-one.vercel.app/",
-    desc: "microCMSやSSGフォームとの連携、モーダル表示など、JavaScriptを活用して動的な要素を実装したカフェのWEBサイトです。",
+    desc: "microCMSやSSGフォームとの連携、モーダル表示など、JavaScriptを活用して動的な要素を実装したカフェのWEBサイトです。期間限定商品やお知らせなどCMSを活用するにあたり、クライアントが簡単にページを更新できるコードを意識しました。",
     tags: ["microCMS", "SSGform", "React"],
     time: "制作期間：約30日",
   },
@@ -107,6 +107,18 @@ function Works() {
     setSelectedImage(null);
   };
 
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [selectedImage]);
+
   return (
     <div className={styles.page}>
       <Header />
@@ -125,7 +137,7 @@ function Works() {
           </p>
         </div>
         <section className={styles.worksSection}>
-        {/* ウェブサイト＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
+          {/* ウェブサイト＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */}
           <h3 className={styles.worksCategory}>Site</h3>
           <p className={styles.workNote}>＊クリックでサイトに移動＊</p>
           <div className={styles.worksGrid}>
@@ -233,20 +245,19 @@ function Works() {
           </div>
         </section>
       </main>
-
       {selectedImage && (
         <div className={styles.modalOverlay} onClick={closeModal}>
           <div className={styles.modalContent}>
+            <span className={styles.closeGuide}>タップして閉じる</span>
             <img
-              src={selectedImage.image}
-              alt={selectedImage.title}
+              src={selectedImage.src}
+              alt={selectedImage.label}
               className={styles.modalImage}
             />
-            <p className={styles.modalCaption}>{selectedImage.title}</p>
+            <p className={styles.modalCaption}>{selectedImage.label}</p>
           </div>
         </div>
-      )}
-
+      )}{" "}
       <Footer />
     </div>
   );
