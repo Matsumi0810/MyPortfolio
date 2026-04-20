@@ -250,11 +250,12 @@ function Works() {
           <div className={styles.modalContent}>
             <span className={styles.closeGuide}>タップして閉じる</span>
             <img
-              src={selectedImage.src}
-              alt={selectedImage.label}
+              src={selectedImage.image} // src → image
+              alt={selectedImage.title} // label → title
               className={styles.modalImage}
             />
-            <p className={styles.modalCaption}>{selectedImage.label}</p>
+            <p className={styles.modalCaption}>{selectedImage.title}</p>{" "}
+            {/* label → title */}
           </div>
         </div>
       )}{" "}
